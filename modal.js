@@ -50,14 +50,16 @@ Template[templateName].rendered = function(){
 	console.log('modal rendered');
 
 	if (recompileAngular) {
-	// Recompile AngularJS directives
-	angular.element(document).injector().invoke(['$compile', '$document', '$rootScope',
+	// Compile AngularJS directives inside modal HTML
+	angular.element('.modal').injector().invoke(['$compile', '$document', '$rootScope',
           function ($compile, $document, $rootScope) {
-            $compile($document)($rootScope);
+            $compile(angular.element('.modal'))($rootScope);
             if (!$rootScope.$$phase) $rootScope.$apply();
           }
         ]);
 	}
+
+
 
 	$modal = $('.modal')
 	

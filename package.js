@@ -31,6 +31,9 @@ Package.onUse(function(api) {
   // api.addFiles('.meteor/local/bower/angular-ui-tree/dist/angular-ui-tree.min.css', 'client');
   // api.addFiles('.meteor/local/bower/angular-ui-tree/dist/angular-ui-tree.js', 'client');
 
+  api.addFiles('bower_components/ng-tags-input/ng-tags-input.js', 'client');
+  api.addFiles('bower_components/ng-tags-input/ng-tags-input.css', 'client');  
+
   api.addFiles('lib/multiple-date-picker.less', 'client');
   api.addFiles('lib/multipleDatePicker.js', 'client');  
 
